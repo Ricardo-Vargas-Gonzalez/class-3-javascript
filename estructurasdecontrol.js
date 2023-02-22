@@ -27,3 +27,31 @@ console.log(var6); // Cuando sumas un undefined + undifined te da como resultado
 
 var6 = 5;
 console.log(var6);
+
+console.log("____________________________")
+
+//If- Else If- Else
+function validarEdad(edad) {
+    if(confirm('¿Estas de acuerdo en continuiar con esto?')) {
+        console.log("Sigue baho tu propio riesgo");
+        if (edad >= 18 && edad <= 150) {
+            console.log("ya puede ir el sat por ti");
+        } else if (edad > 150 ) {
+            console.log("antiguos espiritus transformen este cuerpo decadente...");
+        } else if  (edad >= 0) {
+            console.log("tas chavo chavo");
+        } else {
+            console.log("¿Como es que existes?")
+        }
+    } else  {
+        console.log("Que cachorrito... XD");
+    }
+}
+
+let edad = prompt("Introduce tu edad");
+if (edad && !isNaN(edad)) {
+    validarEdad(edad);
+} else {
+    alert("Debes Introducir tu edad");
+    location.reload();
+}
