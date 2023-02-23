@@ -1,6 +1,6 @@
 //Se llaman estructuras de control porque podemos controlar el flujo de nuestro programa, existiendo alrededor de 5 o 6, tecnicament 14 statements de control
 // CICLO FOR
-/*
+
 for (let i = 0; i < 19; i++) {
     if ((i % 2) != 0) {
         continue;
@@ -76,8 +76,7 @@ if (edad && !isNaN(edad)) {
     alert("Debes Introducir tu edad");
     location.reload();
 }
-*/
-/*
+
 //------------------------------------
 // While
 let boletosDisponibles = 10;
@@ -89,22 +88,23 @@ while (boletosDisponibles > 0) {
     console.log("__________________")
 }
 
+
 // Do while
 do {
     console.log("Boleto comprado para el Corona Capital")
     boletosDisponibles--;
     console.log("Quedan: " + boletosDisponibles)
 } while (boletosDisponibles > 0);
-*/
+
 
 //------------------
 // TRY CATCH finally, no es una estructura de control es un error handeling, ayuda a que JavaScript no de el error directamente, sino que sobreescriba el código 
 try {
     // Código susceptible a fallar
-    console.log("holi")
-    balidaredad(edad);
+    throw "orden 66"
 } catch (error) {
-    console.info("balidaredad no existe");
+    console.error("ERRRRROOOOOOOOR");
+    console.warn(error)
 } finally {
     console.warn("Tu crush no te quiere :(");
 }
