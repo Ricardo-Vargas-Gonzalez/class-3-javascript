@@ -1,4 +1,6 @@
 //Se llaman estructuras de control porque podemos controlar el flujo de nuestro programa, existiendo alrededor de 5 o 6, tecnicament 14 statements de control
+// CICLO FOR
+/*
 for (let i = 0; i < 19; i++) {
     if ((i % 2) != 0) {
         continue;
@@ -48,10 +50,62 @@ function validarEdad(edad) {
     }
 }
 
+function mandarMensajes(edad) {
+    switch(edad) {
+        case 13 :
+            console.log("regresa a la escuela pequeño");
+            break;
+        case 17:
+            console.log("Amo su inocencia....");
+            break;
+        case 5:
+            validarEdad(edad);
+        default:
+            console.log("XD");
+    }
+}
+
 let edad = prompt("Introduce tu edad");
 if (edad && !isNaN(edad)) {
-    validarEdad(edad);
+
+    edad = Number(edad);
+
+    validarEdad(edad)
+    mandarMensajes(edad);
 } else {
     alert("Debes Introducir tu edad");
     location.reload();
 }
+*/
+/*
+//------------------------------------
+// While
+let boletosDisponibles = 10;
+
+while (boletosDisponibles > 0) {
+    console.log("Boleto comprado para el Corona Capital")
+    boletosDisponibles--;
+    console.log("Quedan: " + boletosDisponibles)
+    console.log("__________________")
+}
+
+// Do while
+do {
+    console.log("Boleto comprado para el Corona Capital")
+    boletosDisponibles--;
+    console.log("Quedan: " + boletosDisponibles)
+} while (boletosDisponibles > 0);
+*/
+
+//------------------
+// TRY CATCH finally, no es una estructura de control es un error handeling, ayuda a que JavaScript no de el error directamente, sino que sobreescriba el código 
+try {
+    // Código susceptible a fallar
+    console.log("holi")
+    balidaredad(edad);
+} catch (error) {
+    console.info("balidaredad no existe");
+} finally {
+    console.warn("Tu crush no te quiere :(");
+}
+//puede existir infinidad de lineas de codigo, pero donde se detecta el error, ahi se deja de ejecutar y pasa al finally, el cula siempre se ejecutará
